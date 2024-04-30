@@ -6,7 +6,7 @@
   "author": "froguard",
   "main": "index.ts",
   "scripts": {
-    "test": "ts-node ./index.ts",
+    "test": "ts-node ./src/index.ts",
     "new": "npm run create",
     "create": "ts-node ./scripts/.script-create-new.ts",
     "lint": "run-s lint:tsc lint:eslint",

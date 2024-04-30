@@ -6,5 +6,9 @@
 
 - [leetcode‘s problems](https://leetcode.cn/problemset/)
 - [language & envs](https://support.leetcode.cn/hc/kb/article/1194343/)
-  - typescript:
-  - javascript: nodejs 14.8.0
+  - typescript: nodejs@14.8.0, ts-node@?.?.?
+  - javascript: nodejs@14.8.0
+
+## copyright
+
+@Pumeow (@Froguard)
