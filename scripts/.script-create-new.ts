@@ -5,7 +5,7 @@
 import path from 'path';
 import Colors from 'color-cc';
 import minimist from 'minimist';
-import { writeFileSync, existsSync } from 'fs';
+import { writeFileSync, existsSync, mkdirSync } from 'fs';
 
 const ROOT_PATH = path.join(__dirname, '../');
 const NOW = getNowTime();
@@ -34,6 +34,10 @@ console.log({ newItemName });
       console.log(Colors.warning(`The target file is existed!`), Colors.magenta(newFilePath));
       // process.exit(-1);
     } else {
+      const dirPath = path.dirname(newFilePath);
+      if (!existsSync(dirPath)) {
+        mkdirSync(dirPath);
+      }
       const content = ['// \n', '/**', ' * ', ' * ', ' */\n', `// ts-node ${newFilePathRel}\n`].join('\n');
       writeFileSync(newFilePath, content, { encoding: 'utf-8' });
       console.log(Colors.success(`Create file success! ${Colors.green(newFilePathRel)}`));
