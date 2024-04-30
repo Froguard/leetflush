@@ -1,0 +1,26 @@
+// https://leetcode-cn.com/problems/check-permutation-lcci
+/*
+给定两个字符串 s1 和 s2，请编写一个程序，确定其中一个字符串的字符重新排列后，能否变成另一个字符串。
+
+示例 1：
+输入: s1 = "abc", s2 = "bca"
+输出: true
+
+示例 2：
+输入: s1 = "abc", s2 = "bad"
+输出: false
+
+说明：
+0 <= len(s1) <= 100
+0 <= len(s2) <= 100
+*/
+/**
+ * @param {string} s1
+ * @param {string} s2
+ * @return {boolean}
+ */
+var CheckPermutation = function (s1, s2) {
+  let ss1 = s1.split('').sort((a, b) => a.charCodeAt(0) - b.charCodeAt(0));
+  let ss2 = s2.split('').sort((a, b) => a.charCodeAt(0) - b.charCodeAt(0));
+  return ss1.join('') == ss2.join('');
+};

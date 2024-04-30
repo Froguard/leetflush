@@ -1,3 +1,5 @@
+const { env } = require("process");
+
 /**
  * 1. 使用 eslint 而非 tslint，因为 tslint 已经废弃不更新，其官方也推荐 eslint
  * 2. prettier 和 eslint 有一定交叉的地方，但不妨碍同时使用，主要目的是各司其职
@@ -27,6 +29,9 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['warn'],
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-var-requires": "warn",
+    "@typescript-eslint/no-this-alias": "warn",
+    "no-inner-declarations": "warn",
     // 
     'import/order': ['warn', {
       groups: ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"]
@@ -37,6 +42,10 @@ module.exports = {
     // 'react-hooks/rules-of-hooks': 'warn', // 检查 effect 规则
     // 'react-hooks/exhaustive-deps': 'warn', // 检查 effect 依赖
     //...
+  },
+  env: {
+    browser: true,
+    node: true,
   },
   globals: {
     // Nodejs
@@ -49,15 +58,13 @@ module.exports = {
     // debug
     debugger: true,
     DEBUG: true,
-    // test-case
-    describe: true, // 测试用例所需对象
-    it: true, // 测试用例所需对象
     // ES6+
     Promise: true,
-    DEBUG: true,
-    // 前端 MVVM 框架
-    React: true,
-    Vue: true,
+    console: true,
+    // leetcode type
+    TreeNode: true,
+    LinkNode: true,
+    ListNode: true,
   },
   settings: {
     "import/resolver": {
@@ -65,6 +72,7 @@ module.exports = {
         alwaysTryTypes: true
       },
       node: true,
+      browser: true,
     }
   }
 }

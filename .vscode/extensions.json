@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "maggie.eslint-rules-zh-plugin",
+    "kisstkondoros.vscode-gutter-preview",
+    "gruntfuggly.todo-tree",
+    "davidanson.vscode-markdownlint",
+    "necinc.elmmet",
+    "vscode-icons-team.vscode-icons",
+    "xabikos.javascriptsnippets",
+    "michelemelluso.gitignore"
+  ]
+}

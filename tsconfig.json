@@ -41,12 +41,15 @@
   "include": [
     // 没有被 include 进去的文件，一些公共的类型定义是没办法识别的
     "./*.ts",
+    "./*.js",
     "./src/**/*.ts",
+    "./src/**/*.js",
     "./src/**/*.d.ts",
     "./scripts/**/*.ts",
     "./scripts/**/*.d.ts",
     "./com/**/*.ts",
-    "./com/**/*.d.ts"
+    "./com/**/*.d.ts",
+    "src/sum-twoSum2.js"
   ],
-  "exclude": ["node_modules", "./node_modules/**"]
+  "exclude": ["node_modules"]
 }
