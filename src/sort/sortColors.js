@@ -29,20 +29,23 @@ nums[i] 为 0、1 或 2
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var sortColors = function (nums) {
+  // 方法1，简单粗暴用 sort
+  // nums.sort();
+  // 方法2，手写循环，找到 0,1,2 三种出现的次数；然后重新给 nums 赋值
   let count0 = 0;
   let count1 = 0;
-  let count2 = 0;
+  // let count2 = 0;
   for (const n of nums) {
     if (n === 0) {
       count0++;
     } else if (n === 1) {
       count1++;
-    } else {
-      count2++;
     }
+    // else {
+    //  count2++;
+    // }
   }
   // console.log({ count0, count1, count2 });
-
   for (let i = 0; i < nums.length; i++) {
     if (i < count0) {
       nums[i] = 0;
@@ -52,4 +55,21 @@ var sortColors = function (nums) {
       nums[i] = 2;
     }
   }
+  // 方法 3：没看懂的大神方案
+  // let c0 = 0;
+  // let c1 = 0;
+  // let c2 = 0;
+  // for (let i = 0; i < nums.length; i++) {
+  //   const ni = nums[i];
+  //   if (ni === 0) {
+  //     nums[c2++] = 2;
+  //     nums[c1++] = 1;
+  //     nums[c0++] = 0;
+  //   } else if (ni === 1) {
+  //     nums[c2++] = 2;
+  //     nums[c1++] = 1;
+  //   } else {
+  //     nums[c2++] = 2;
+  //   }
+  // }
 };

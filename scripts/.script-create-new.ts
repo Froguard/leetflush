@@ -38,7 +38,7 @@ console.log({ newItemName });
       if (!existsSync(dirPath)) {
         mkdirSync(dirPath);
       }
-      const content = ['// \n', '/**', ' * ', ' * ', ' */\n', `// ts-node ${newFilePathRel}\n`].join('\n');
+      const content = ['//  \n', '/*', ' ', ' ', '*/\n', `// 调试命令: ts-node ${newFilePathRel}\n`].join('\n');
       writeFileSync(newFilePath, content, { encoding: 'utf-8' });
       console.log(Colors.success(`Create file success! ${Colors.green(newFilePathRel)}`));
     }

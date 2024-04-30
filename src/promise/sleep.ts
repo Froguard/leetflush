@@ -21,8 +21,9 @@ sleep(100).then(() => {
 1 <= millis <= 1000
 */
 
-// ts-node ./src/sleep.ts
+// ts-node ./src/promise/sleep.ts
 /**
+ * [uncommit]
  * 睡眠指定时间
  * @param {number} millis
  * @returns {Promise<void>}
