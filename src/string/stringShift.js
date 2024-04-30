@@ -34,7 +34,7 @@ shift[i].length == 2
 0 <= shift[i][1] <= 100
 */
 /**
- * [uncommit]
+ * 字符串的左右移
  * @param {string} s
  * @param {number[][]} shift
  * @return {string}

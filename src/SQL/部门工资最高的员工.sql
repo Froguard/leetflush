@@ -3,7 +3,6 @@
 # 部门工资最高的员工
 
 # Write your MySQL query statement below
-# [uncommit]
 
 select 
   Department.name as 'Department',

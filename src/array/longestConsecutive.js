@@ -23,16 +23,17 @@
  * @return {number}
  */
 var longestConsecutive = function (nums) {
-  if (nums.length == 1) {
-    return 1;
-  }
-  nums.sort((a, b) => a - b);
-  // console.log(nums);
   const LEN = nums.length;
+  if (LEN <= 1) {
+    return LEN;
+  }
+  //
   const HALF = LEN / 2;
+  nums.sort((a, b) => a - b);
+  console.log('sorted:', nums);
   let max = 1;
   for (let i = 0; i < nums.length; i++) {
-    if (max >= HALF || max >= LEN - i) {
+    if (max > HALF || max >= LEN - i) {
       break;
     }
     max = Math.max(max, getKeepCount(nums, i));
@@ -49,11 +50,17 @@ var longestConsecutive = function (nums) {
 function getKeepCount(nums, pos) {
   let keepCount = 1;
   for (let i = pos + 1; i < nums.length; i++) {
-    if (nums[i] - nums[i - 1] === 1) {
+    const distance = nums[i] - nums[i - 1];
+    if (distance === 1) {
       keepCount++;
+    } else if (distance === 0) {
+      // 前后相等也算连续，但是不计数
+      continue;
     } else {
       break;
     }
   }
   return keepCount;
 }
+
+console.log(longestConsecutive([1, 2, 0, 1]));
