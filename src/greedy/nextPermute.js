@@ -47,10 +47,11 @@ var nextPermutation = function (nums) {
     [nums[0], nums[1]] = [nums[1], nums[0]]; // swap
     return;
   }
+  const numsStr = nums.join(',');
   const doneList = permute(nums);
-  console.log(doneList);
-  const pos = doneList.indexOf(nums.join(''));
-  const nextOne = doneList[(pos + 1) % doneList.length];
+  // console.log(doneList);
+  const pos = doneList.indexOf(numsStr);
+  const nextOne = doneList[(pos + 1) % doneList.length].split(',');
 
   // 不能返回，需要原地在 nums 上修改
   for (let i = 0; i < nextOne.length; i++) {
@@ -69,11 +70,13 @@ function permute(nums) {
   const len = numsArr.length;
   // 确保唯一性(经过真实提交测试，需要针对重复数字得情况，产生的结果进行去重，所以这里用 set 而非 array)
   const resList = new Set();
+  let lastAdded = '';
   // 全排列函数
   function _deal(readyList, waitList) {
     if (readyList.length === len) {
       // 已经排好了的直接记录到 Set
-      resList.add(readyList.join(''));
+      lastAdded = readyList.join(',');
+      resList.add(lastAdded);
     } else {
       for (let i = 0; i < waitList.length; i++) {
         // 循环遍历未被排进去的部分
