@@ -1,0 +1,54 @@
+$HOME
+.idea
+.DS_Store
+*.iml
+*.icloud
+
+# temp
+tmp
+temp
+tmp.*
+temp.*
+tmp-*.*
+temp-*.*
+npm-tmp
+
+# useless json
+npm-shrinkwrap-bak.json
+npm-shrinkwrap-bak-npm3.json
+**/compilation-stats.json
+
+# log
+*.log
+*.log.*
+logs/
+
+# output
+dist/
+output/
+
+# pkgs 
+node_modules
+
+# local file
+local.*
+local-*.*
+**/*/.local.*
+**/*/.local-*.*
+
+#./test coverage js
+coverage/**/*
+
+# test file
+*.bigfile
+
+# ignore files in this project
+src/**/*/history/*.*
+
+# all gitkeep
+!**/*/.gitkeep
+!.gitkeep
+
+
+# cahche
+.cache

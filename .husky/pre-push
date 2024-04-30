@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# logs
+echo "\nexec .husky/pre-push\n"
+
+export GIT_CMD="git push"
+
+# pre-git-cmd
+echo "\nnpm run pre-git-cmd\n"
+npm run pre-git-cmd

@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# logs
+echo "\nexec .husky/pre-commit\n"
+
+export GIT_CMD="git commit"
+
+# pre-git-cmd
+echo "\nnpm run pre-git-cmd\n"
+npm run pre-git-cmd
+
+# lint-staged
+echo "\nnpx lint-staged\n"
+npx lint-staged

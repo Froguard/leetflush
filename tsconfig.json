@@ -1,0 +1,52 @@
+{
+  // This is an alias to @tsconfig/node16: https://github.com/tsconfig/bases
+  "extends": "@tsconfig/node16/tsconfig.json", // 需要先执行 npm install
+  // Most ts-node options can be specified here using their programmatic names.
+  "ts-node": {
+    // It is faster to skip typechecking.
+    // Remove if you want ts-node to do typechecking.
+    "transpileOnly": true,
+    "files": true,
+    "compilerOptions": {
+      // compilerOptions specified here will override those declared below,
+      // but *only* in ts-node.  Useful if you want ts-node and tsc to use
+      // different options with a single tsconfig.json.
+    }
+  },
+  "compilerOptions": {
+    // typescript options here
+    "lib": ["es2022"],
+    "target": "esnext",
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "declaration": true,
+    "sourceMap": false,
+    "removeComments": false,
+    "newLine": "crlf",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "allowUnusedLabels": true,
+    "allowUnreachableCode": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": false,
+    "strictNullChecks": false
+  },
+  "typeRoots": [
+    "./node_modules/@types/",
+    "./com/types/" //
+  ],
+  "include": [
+    // 没有被 include 进去的文件，一些公共的类型定义是没办法识别的
+    "./*.ts",
+    "./src/**/*.ts",
+    "./src/**/*.d.ts",
+    "./scripts/**/*.ts",
+    "./scripts/**/*.d.ts",
+    "./com/**/*.ts",
+    "./com/**/*.d.ts"
+  ],
+  "exclude": ["node_modules", "./node_modules/**"]
+}
