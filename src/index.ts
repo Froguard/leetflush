@@ -1,1 +1,4 @@
-console.log(['', 'Exec "npx ts-node ./src/xxx.ts" to debug you code...', ''].join('\n'));
+import Colors from 'color-cc';
+
+//
+console.log(`\nExec ${Colors.magenta('npx ts-node ./src/xxx.ts')} to debug you code...\n\n`);
