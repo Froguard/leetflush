@@ -34,6 +34,8 @@
 
 /**
  * [uncommit]
+ * 待完成: 当前办法会超时！
+ * eg：[2,2,4,0,1,2,4,4,0]，而这都还算短的了，长的能到 100 长度！！！
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
@@ -62,7 +64,7 @@ var nextPermutation = function (nums) {
  * @returns {string[]} newStrList
  */
 function permute(nums) {
-  const numsArr = nums.map(s => parseInt(s));
+  const numsArr = nums.concat();
   numsArr.sort((a, b) => a - b); // 从小到大排序
   const len = numsArr.length;
   // 确保唯一性(经过真实提交测试，需要针对重复数字得情况，产生的结果进行去重，所以这里用 set 而非 array)

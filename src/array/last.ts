@@ -20,8 +20,6 @@ arr 是一个有效的 JSON 数组
 
 // ts-node ./src/array/array-last.ts
 
-// [uncommit]
-
 declare global {
   interface Array<T> {
     last(): T | -1;

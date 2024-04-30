@@ -19,16 +19,26 @@
 解释: 7/-3 = -2.33333.. ，向零截断后得到 -2 。
 
 提示：
--231 <= dividend, divisor <= 231 - 1
+-2**31 <= dividend, divisor <= 2**31 - 1
 divisor != 0
 */
 /**
- * [uncommit]
  * @param {number} dividend
  * @param {number} divisor
  * @return {number}
  */
 var divide = function (dividend, divisor) {
-  let isNegative = !((dividend >= 0 && divisor > 0) || (dividend < 0 && divisor < 0));
+  // 异常情况，-MIN / -1 ===> +MIN 将会超过 MAX 边界
+  const MAX = 2 ** 31 - 1; // 2147483647
+  const MIN = -(2 ** 31); // -2147483648
+  if (dividend === MIN && divisor === -1) {
+    return MAX;
+  }
+  // 正常情况
+  const isD1Neg = dividend < 0;
+  const isD2Neg = divisor < 0;
+  let isNegative = !((!isD1Neg && !isD2Neg) || (isD1Neg && isD2Neg));
   return (isNegative ? -1 : 1) * Math.floor(Math.abs(dividend / divisor));
 };
+
+console.log('AAA:', 2 ** 31 - 1);

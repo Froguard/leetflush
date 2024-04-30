@@ -18,7 +18,6 @@
 -109 <= nums[i] <= 109
 */
 /**
- * [uncommit]
  * @param {number[]} nums
  * @return {number}
  */

@@ -24,7 +24,6 @@ nums[i] 为 0、1 或 2
 进阶：你能想出一个仅使用常数空间的一趟扫描算法吗？
 */
 /**
- * [uncommit]
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */

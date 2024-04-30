@@ -14,7 +14,6 @@ s提示：
 arrayA.length <= 100000
 */
 /**
- * [uncommit]
  * @param {number[]} arrayA
  * @return {number[]}
  */
