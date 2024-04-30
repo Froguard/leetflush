@@ -4,7 +4,7 @@
   "description": "In order to work more efficiently",
   "private": true,
   "author": "froguard",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "scripts": {
     "test": "ts-node ./src/index.ts",
     "new": "npm run create",
