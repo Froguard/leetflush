@@ -34,7 +34,7 @@ console.log({ newItemName });
       console.log(Colors.warning(`The target file is existed!`), Colors.magenta(newFilePath));
       // process.exit(-1);
     } else {
-      const content = ['// ', '', '/**', ' * ', ' * ', ' */', '', ''].join('\n');
+      const content = ['// \n', '/**', ' * ', ' * ', ' */\n', `// ts-node ${newFilePathRel}\n`].join('\n');
       writeFileSync(newFilePath, content, { encoding: 'utf-8' });
       console.log(Colors.success(`Create file success! ${Colors.green(newFilePathRel)}`));
     }
