@@ -1,5 +1,4 @@
-// https://leetcode.cn/problems/check-if-object-obj-of-class/
-
+// https://leetcode.cn/problems/check-if-object-instance-of-class/description/
 /**
 请你编写一个函数，检查给定的值是否是给定类或超类的实例。
 

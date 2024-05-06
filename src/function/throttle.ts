@@ -60,17 +60,33 @@ calls = [
 
 // 调试命令: ts-node ./src/function/throttle.ts
 
-type F = (...args: any[]) => void;
+type AnyFunc = (...args: any[]) => any;
 
 /**
- * [uncommit]
- * 待完成
  * 节流
  * @param {function} fn
- * @param {number} time
+ * @param {number} t
+ * 应用场景：滚动过程中的处理，确保在既定时间内，只处理一次
+ * 本质：限流的一句话描述是它应尽可能频繁地调用提供的回调，但不应超过 t 毫秒的频率
  */
-function throttle(fn: F, t: number): F {
+function throttle(fn: AnyFunc, t = 0) {
+  let timer: any = null;
+  let nextTimeToCallFn = 0; // 记录下一次允许执行的时间
   //
+  return function (...args: any[]) {
+    // 求出下一次执行时候，所需要的 setTimeout 延时
+    const delay = Math.max(0, nextTimeToCallFn - Date.now()); // 确保非负(首次执行可能会负)
+    if (timer) {
+      clearTimeout(timer);
+      console.log(`在 ${t} ms 内，函数只执行一次（即第1次）`, ...args);
+    }
+    // reset timer &  exec fn
+    timer = setTimeout(() => {
+      // @ts-ignore
+      fn.call(this, ...args);
+      nextTimeToCallFn = Date.now() + t;
+    }, delay);
+  };
 }
 
 /**

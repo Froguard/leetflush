@@ -48,8 +48,7 @@
     "./scripts/**/*.ts",
     "./scripts/**/*.d.ts",
     "./com/**/*.ts",
-    "./com/**/*.d.ts",
-    "src/sum-twoSum2.js"
+    "./com/**/*.d.ts"
   ],
   "exclude": ["node_modules"]
 }
