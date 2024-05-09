@@ -72,7 +72,7 @@ t = 1000
 fn 返回一个 Promise 对象 
  
 */
-
+// [uncommit]
 // 调试命令: ts-node ./src/promise/timeLimit.ts
 
 type Fn = (...params: any[]) => Promise<any>;

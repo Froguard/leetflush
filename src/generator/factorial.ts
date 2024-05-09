@@ -41,7 +41,7 @@ gen.next().value // 1
 0 <= n <= 18 
  
 */
-// [uncommit]
+
 // 调试命令: ts-node ./src/generator/factorial.ts
 
 function* factorial(n: number): Generator<number> {

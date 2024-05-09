@@ -62,7 +62,7 @@ actions.length === values.length
 actions[i] 为 "call" 和 "getCallCount" 中的一个
 fnName 为 "sum", "factorial" 和 "fib" 中的一个
 */
-// [uncommit]
+
 // 调试命令: ts-node ./src/function/memoize.ts
 
 type Fn = (...params: number[]) => number;
