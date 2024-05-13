@@ -69,7 +69,6 @@ fn = function (n) {
 分组选择方法是根据每个数字是否大于 5 来分割数组。 
  
 */
-// [uncommit]
 // 调试命令: ts-node ./src/array/diyGroupBy.ts
 
 declare global {

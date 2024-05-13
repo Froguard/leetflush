@@ -28,7 +28,6 @@ gen.next().value; // 3
 提示：
 0 <= callCount <= 50
 */
-// [uncommit]
 // 调试命令: ts-node ./src/generator/fibGenerator.ts
 
 function* fibGenerator(): Generator<number, any, number> {
