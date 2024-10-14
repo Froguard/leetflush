@@ -29,7 +29,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['warn'],
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-var-requires": "warn",
+    "@typescript-eslint/no-var-requires": 0,
     "@typescript-eslint/no-this-alias": "warn",
     "no-inner-declarations": "warn",
     // 

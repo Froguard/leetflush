@@ -16,3 +16,4 @@ npx frogagu pre-git-commit
 echo -e "\x1b[1;90mnpx lint-staged\x1b[90m"
 echo ""
 npx lint-staged
+
