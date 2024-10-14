@@ -2,10 +2,12 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 # logs
-echo "\nexec .husky/pre-push\n"
+echo ""
+echo -e "\x1b[1;35m[pre-push]\x1b[0m: Start git-hooks via husky@^8.0.3..."
 
 export GIT_CMD="git push"
 
-# pre-git-cmd
-echo "\nnpm run pre-git-cmd\n"
-npm run pre-git-cmd
+# pre-git-commit
+echo ""
+echo -e "\x1b[1;90mnpx frogagu pre-git-push\x1b[0m"
+npx frogagu pre-git-push
