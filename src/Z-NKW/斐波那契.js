@@ -16,7 +16,6 @@
  * - 4181
  */
 const readline = require('readline');
-
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -28,14 +27,15 @@ rl.on('line', function (line) {
   process.exit();
 });
 
+// n >= 1
 function fabonacci(n) {
   if (n <= 2) {
     return 1;
   }
   let fn_1 = 1;
   let fn_2 = 1;
-  let sum = 2;
-  for (let i = 0; i < n; i++) {
+  let sum = fn_1 + fn_2;
+  for (let i = 3; i <= n; i++) {
     sum = fn_1 + fn_2;
     fn_1 = fn_2;
     fn_2 = sum;
