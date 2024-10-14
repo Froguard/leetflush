@@ -7,7 +7,6 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "ts-node ./src/index.ts",
-    "new": "npm run create",
     "create": "ts-node ./scripts/.script-create-new.ts",
     "lint": "run-s lint:tsc lint:eslint",
     "lint:tsc": "tsc --project ./tsconfig.json --noEmit --skipLibCheck",
