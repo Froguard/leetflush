@@ -22,8 +22,6 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-let inputArr = [];
-
 rl.on('line', function (line) {
   const n = parseInt(line);
   console.log(fabonacci(n));
@@ -36,7 +34,7 @@ function fabonacci(n) {
   }
   let fn_1 = 1;
   let fn_2 = 1;
-  let sum = 0;
+  let sum = 2;
   for (let i = 0; i < n; i++) {
     sum = fn_1 + fn_2;
     fn_1 = fn_2;
