@@ -11,4 +11,3 @@ export GIT_CMD="git push"
 echo ""
 echo -e "\x1b[1;90mnpx frogagu pre-git-push\x1b[0m"
 npx frogagu pre-git-push
-
