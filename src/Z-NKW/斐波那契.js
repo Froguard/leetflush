@@ -32,6 +32,7 @@ function fabonacci(n) {
   if (n <= 2) {
     return 1;
   }
+  // 动态规划
   let fn_1 = 1;
   let fn_2 = 1;
   let sum = fn_1 + fn_2;

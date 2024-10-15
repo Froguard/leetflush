@@ -37,4 +37,3 @@ rl.on('line', line => {
   }
   console.log(res.size);
 });
-
