@@ -28,7 +28,8 @@ const rl = readline.createInterface({
 });
 
 rl.on('line', line => {
-  const chars = line.split('');
+  // const chars = line.split('');
+  const chars = line; // 字符串可以直接允许 for-of 遍历
   const res = new Set();
   for (const c of chars) {
     if (c.match(/[a-z]/i) || c.match(/[0-9]/)) {
