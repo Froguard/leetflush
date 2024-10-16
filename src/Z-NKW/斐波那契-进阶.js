@@ -25,6 +25,7 @@
  * - 对于80%的数据，𝑛⩽10^15
  * - 对于100%的数据，2⩽𝑛⩽10^1000000
  */
+
 const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,
