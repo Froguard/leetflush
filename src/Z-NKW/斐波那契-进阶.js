@@ -77,3 +77,28 @@ function calcExpr(n) {
   }
 }
 */
+
+
+/*
+// console.log(calcExpr(0)); // 0
+console.log('n=1时：', calcExpr(1)); // -1
+console.log('n=2时：', calcExpr(2)); // 1
+console.log('n=3时：', calcExpr(3)); // -1
+console.log('n=4时：', calcExpr(4)); // 1
+console.log('n=5时：', calcExpr(5)); // -1
+console.log('n=6时：', calcExpr(6)); // 1
+console.log('n=7时：', calcExpr(7)); // -1
+console.log('n=8时：', calcExpr(8)); // 1
+console.log('n=9时：', calcExpr(9)); // -1
+console.log('n=10时：', calcExpr(10)); // 1
+console.log('n=11时：', calcExpr(11)); // -1
+console.log('n=12时：', calcExpr(12)); // 1
+console.log('n=13时：', calcExpr(13)); // -1
+console.log('n=14时：', calcExpr(14)); // 1
+console.log('n=15时：', calcExpr(15)); // -1
+console.log('n=16时：', calcExpr(16)); // 1
+console.log('n=17时：', calcExpr(17)); // -1
+console.log('n=18时：', calcExpr(18)); // 1
+console.log('n=19时：', calcExpr(19)); // -1
+console.log('n=20时：', calcExpr(20)); // 1
+*/
