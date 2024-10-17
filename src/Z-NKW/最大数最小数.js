@@ -26,7 +26,7 @@ const rl = readline.createInterface({
 
 rl.on('line', line => {
   const nums = line.split(/\s+/);
-  let max = 0;
+  let max = 1;
   let min = 1000000; // Math.Infinty;
   for (const s of nums) {
     const n = parseInt(s);
@@ -36,4 +36,3 @@ rl.on('line', line => {
   console.log(`The maximum number is : ${max}`);
   console.log(`The minimum number is : ${min}`);
 });
-
