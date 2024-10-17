@@ -42,7 +42,9 @@
 
 ### 1、理论题（E企学平台）
 
-https://eqx.zmd.com.cn/o2o/#/normal/project/detail/1846495153452863490/commonTask
+- 入口：https://eqx.zmd.com.cn/o2o/#/normal/project/detail/1846495153452863490/commonTask
+
+- 排名结果：https://eqx.zmd.com.cn/o2o/#/playinfo?projectid=1846495153452863490&taskId=1846495155550457857
 
 ### 2、编程题（牛客网）
 
@@ -51,6 +53,10 @@ https://eqx.zmd.com.cn/o2o/#/normal/project/detail/1846495153452863490/commonTas
 - 比赛时间：2024年10月17日 09:20 - 2024年10月17日 11:20
 - 比赛时长：120分钟
 - 比赛地址：https://www.nowcoder.com/acm/contest/93299。【邀请码：zt1017】
+
+题目1：有序序列合并：https://ac.nowcoder.com/acm/contest/93299/A
+
+题目2：重拍字符串：https://ac.nowcoder.com/acm/contest/93299/B
 
 ## 两题均做出来的有：
 
