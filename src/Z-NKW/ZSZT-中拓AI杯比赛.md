@@ -36,6 +36,8 @@
 - [x] [最大的差](./最大的差.js)
 - [x] [两数之和](./两数之和.js)
 
+排名：https://ac.nowcoder.com/acm/contest/92882#rank
+
 <br />
 
 ## 正式
