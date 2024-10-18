@@ -64,11 +64,13 @@
 
 ##### 两题均做出来的有：
 
-> 黄明勇，曾益增
+> 黄明勇（80年老哥），曾益增(90年外协)
 
 # 二、交投集团练习赛
 
 > 报名表：https://docs.qq.com/sheet/DVHJpb3FIdENLQmdN?tab=BB08J2
+
+![img](./imgs/2024年集团公司-AI锋杯-竞赛名单.png)
 
 - 理论知识：https://tkyex61kz8.feishu.cn/wiki/CXUxw8cPMi9ryDkeCGvcCtfxnPe?fromScene=spaceOverview
 - 技能操作：https://tkyex61kz8.feishu.cn/wiki/Y9afw8bkkiPdT3khWbscfZRLngh
