@@ -1,5 +1,7 @@
 # ZTST-ai-race
 
+## 一、内部选拔赛
+
 ```txt
 群公告
 比赛宗旨：以赛促学，强学促用
@@ -15,7 +17,7 @@
 2、牛客网注册昵称信息请参考以下格式：姓名_手机号（崔杰_18658862057）
 ```
 
-## 练习
+### 练习
 
 理论题x(83+52)：https://docs.qq.com/doc/DVEVRdlZrUVVza05z
 
@@ -40,15 +42,15 @@
 
 <br />
 
-## 正式
+### 正式
 
-### 1、理论题（E企学平台）
+#### 1、理论题（E企学平台）
 
 - 入口：https://eqx.zmd.com.cn/o2o/#/normal/project/detail/1846495153452863490/commonTask
 
 - 排名结果：https://eqx.zmd.com.cn/o2o/#/playinfo?projectid=1846495153452863490&taskId=1846495155550457857
 
-### 2、编程题（牛客网）
+#### 2、编程题（牛客网）
 
 快来参加“浙商中拓-中拓AI杯人工智能技能竞赛-编程题”~
 
@@ -60,6 +62,13 @@
 
 题目2：重拍字符串：https://ac.nowcoder.com/acm/contest/93299/B
 
-## 两题均做出来的有：
+##### 两题均做出来的有：
 
 > 黄明勇，曾益增
+
+# 二、交投集团练习赛
+
+> 报名表：https://docs.qq.com/sheet/DVHJpb3FIdENLQmdN?tab=BB08J2
+
+- 理论知识：https://tkyex61kz8.feishu.cn/wiki/CXUxw8cPMi9ryDkeCGvcCtfxnPe?fromScene=spaceOverview
+- 技能操作：https://tkyex61kz8.feishu.cn/wiki/Y9afw8bkkiPdT3khWbscfZRLngh
