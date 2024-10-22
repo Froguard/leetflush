@@ -72,4 +72,3 @@ function printRes(testCase) {
   }
   console.log(lines, words, chars);
 }
-

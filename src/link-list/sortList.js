@@ -44,7 +44,21 @@ var sortList = function (head) {
   if (!head) {
     return null;
   }
+  // 方法一：投机取巧
+  // 1.先取数
+  let values = getValuesByListNode(head);
+  // 2.再排序
+  values.sort((a, b) => a - b);
+  // 3.再转回链表（这里为了省空间，可以直接在老链表上进行改值，不额外增加空间）
+  let cur = head;
+  for (let i = 0; i < values.length; i++) {
+    cur.val = values[i];
+    cur = cur.next;
+  }
+  return head;
 
+  // 方法二：容易出现超时
+  /*
   let res = [];
   // 使用插入排序的逻辑进行循环插入到res中
   function insertRes(targetNode) {
@@ -76,4 +90,16 @@ var sortList = function (head) {
     head = head.next;
   }
   return res[0];
+  */
 };
+
+// 获取链表中每个节点的值，并组成数组
+function getValuesByListNode(head) {
+  let values = [];
+  let cur = head;
+  while (cur) {
+    values.push(cur.val);
+    cur = cur.next;
+  }
+  return values;
+}

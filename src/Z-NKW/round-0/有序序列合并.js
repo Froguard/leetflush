@@ -62,4 +62,3 @@ rl.on('close', () => {
   console.log(res.join(' '));
   process.exit();
 });
-

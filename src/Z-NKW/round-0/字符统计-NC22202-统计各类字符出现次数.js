@@ -44,4 +44,3 @@ rl.on('line', line => {
   console.log([`Letters=${l}`, `Digits=${n}`, `Others=${o}`].join('\n'));
   process.exit();
 });
-

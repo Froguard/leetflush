@@ -37,4 +37,3 @@ rl.on('close', () => {
   }
   console.log(max - min);
 });
-

@@ -78,7 +78,6 @@ function calcExpr(n) {
 }
 */
 
-
 /*
 // console.log(calcExpr(0)); // 0
 console.log('n=1时：', calcExpr(1)); // -1

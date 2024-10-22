@@ -2,6 +2,8 @@
 // https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/
 // https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/
 /*
+两个链表的第一个公共结点（公共节点）
+
 编写一个程序，找到两个单链表相交的起始节点。
 
 如下面的两个链表：

@@ -1,63 +1,22 @@
-// https://leetcode.cn/problems/longest-common-prefix/description/
-
-/*
-最长公共前缀
-
-编写一个函数来查找字符串数组中的最长公共前缀。
-
-如果不存在公共前缀，返回空字符串 ""。
-
-示例 1：
-输入：strs = ["flower","flow","flight"]
-输出："fl"
-
-示例 2：
-输入：strs = ["dog","racecar","car"]
-输出：""
-解释：输入不存在公共前缀。
- 
-
-提示：
-0 <= strs.length <= 200
-0 <= strs[i].length <= 200
-strs[i] 仅由小写英文字母组成
-
- */
-
 /**
- * @param {string[]} strs
- * @return {string}
+ * 最长公共前缀【简单】
+ * // https://www.nowcoder.com/practice/28eb3175488f4434a4a6207f6f484f47?tpId=295&tqId=732&ru=/exam/oj&qru=/ta/format-top101/question-ranking&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3D%25E7%25AE%2597%25E6%25B3%2595%25E9%259D%25A2%25E8%25AF%2595%26topicId%3D295
+ * // https://leetcode.cn/problems/longest-common-prefix/description/
  */
-var longestCommonPrefix = function (strs) {
+/**
+ * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+ *
+ *
+ * @param strs string字符串一维数组
+ * @return string字符串
+ */
+function longestCommonPrefix(strs) {
   if (!strs || !strs.length) {
     return '';
   } else if (strs.length === 1) {
     return strs[0];
   } else {
     strs.sort((a, b) => a.length - b.length); // 排序找到最短元素，然后以最短元素去比较后边的元素
-    let res = [];
-    // 方法一：有瑕疵，长度长了还是会超时
-    let firstCs = strs[0].split('');
-    for (let i = 0; i < firstCs.length; i++) {
-      let fc = firstCs[i];
-      let matched = true;
-      for (let j = 1; j < strs.length; j++) {
-        let otherCs = strs[j].split('');
-        let oc = otherCs[i];
-        if (fc !== oc) {
-          matched = false;
-          break;
-        }
-      }
-      if (matched) {
-        res.push(fc);
-      } else {
-        break;
-      }
-    }
-    return res.join('');
-    // 方法二
-    /*
     let shortestStr = strs[0];
     let res = '';
     for (let i = 0; i < shortestStr.length; i++) {
@@ -85,9 +44,8 @@ var longestCommonPrefix = function (strs) {
       }
     }
     return res;
-    */
   }
+}
+module.exports = {
+  longestCommonPrefix: longestCommonPrefix,
 };
-
-console.log(longestCommonPrefix(['flow', 'flower', 'flight']));
-console.log(longestCommonPrefix(['dog', 'racecar', 'car']));

@@ -38,4 +38,3 @@ rl.on('line', line => {
   }
   process.exit();
 });
-
