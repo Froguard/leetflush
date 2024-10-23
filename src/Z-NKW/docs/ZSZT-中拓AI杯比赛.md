@@ -66,11 +66,17 @@
 
 > 黄明勇（80年老哥），曾益增(90年外协)
 
-# 二、交投集团练习赛
+<br />
+
+---
+
+<br />
+
+## 二、交投集团练习赛
 
 > 报名表：https://docs.qq.com/sheet/DVHJpb3FIdENLQmdN?tab=BB08J2
 
 ![img](./imgs/2024年集团公司-AI锋杯-竞赛名单.png)
 
-- 理论知识：https://tkyex61kz8.feishu.cn/wiki/CXUxw8cPMi9ryDkeCGvcCtfxnPe?fromScene=spaceOverview
+- 理论知识：https://tkyex61kz8.feishu.cn/wiki/GgrTwUYl3iYBMMkwUu9cj64jnCd **【含答案版】**
 - 技能操作：https://tkyex61kz8.feishu.cn/wiki/Y9afw8bkkiPdT3khWbscfZRLngh

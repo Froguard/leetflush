@@ -31,7 +31,7 @@ function mergeKLists(lists) {
     const curTail = findTailNode(head, node => addNumInSortedArr(sortedVals, node.val));
     preTail = curTail;
   }
-  console.log('sortedVals:', sortedVals);
+  // console.log('sortedVals:', sortedVals);
 
   return resetNodeByVals(firstHead, sortedVals);
 }
