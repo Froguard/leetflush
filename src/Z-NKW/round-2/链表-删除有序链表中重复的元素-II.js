@@ -23,6 +23,8 @@
  * @return ListNode类
  */
 function deleteDuplicates(head) {
+  // 方法一：双指针
+  /*
   // 为方便进行双指针查找，在首节点左侧插入临时节点
   let zeroNode = { next: head }; // 不需要完整节点，主要是为了比对 next
 
@@ -46,6 +48,52 @@ function deleteDuplicates(head) {
     ptR = ptR.next; // 正常挪动指针2
   }
   return zeroNode.next;
+  */
+  // 方法二：转成数组然后处理
+  if (!head) {
+    return null;
+  }
+  const values = getValsByListNode(head);
+  if (values.length === 1) {
+    return head;
+  }
+
+  const records = new Map();
+  for (const v of values) {
+    const count = records.get(v) || 0;
+    records.set(v, count + 1);
+  }
+  // console.log(records);
+  const newValues = values.filter(v => records.get(v) === 1);
+  // console.log(newValues);
+  if (!newValues.length) {
+    return null;
+  }
+
+  let cur = head;
+  for (let i = 0; i < newValues.length; i++) {
+    const newVal = newValues[i];
+    cur.val = newVal;
+    if (i === newValues.length - 1) {
+      cur.next = null;
+    } else {
+      cur = cur.next;
+    }
+  }
+
+  //
+  return head;
+}
+
+function getValsByListNode(head) {
+  let cur = head;
+  const vals = [];
+  while (cur) {
+    const { val, next } = cur;
+    vals.push(val);
+    cur = next;
+  }
+  return vals;
 }
 
 module.exports = {
