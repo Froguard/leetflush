@@ -1,36 +1,30 @@
-// https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof
 /**
-求 数组中的逆序对 的数量
-在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组，求出这个数组中的逆序对的总数。
-
-示例 1:
-输入: [7,5,6,4]
-输出: 5
- 
-限制：
-0 <= 数组长度 <= 50000
-*/
-
-//
-/**
- * @param {number[]} nums
- * @return {number}
+ * 数组中的逆序对
+ * // https://www.nowcoder.com/practice/96bd6684e04a44eb80e6a68efc0ec6c5?tpId=295&tqId=23260&ru=/exam/oj&qru=/ta/format-top101/question-ranking&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3D%25E7%25AE%2597%25E6%25B3%2595%25E9%259D%25A2%25E8%25AF%2595%26topicId%3D295
+ * // https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof
  */
-var reversePairs = function (nums) {
+/**
+ * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+ *
+ *
+ * @param nums int整型一维数组
+ * @return int整型
+ */
+function InversePairs(nums) {
   if (nums.length <= 1) {
     return 0;
   }
   let count = 0;
-  // 方法一，暴力求解，会出现超时
+  // 方法一，暴力求解，会出现超时（测试用例最后一个会挂掉，先弃用这个办法）
   /*
-    for(let i = 0; i <= nums.length; i++){
-        for(let j = i+1; j <= nums.length; j++){
-            if(nums[i] > nums[j]) {
-                count++;
-            }
-        }
-    }
-    */
+	for(let i = 0; i <= nums.length; i++){
+			for(let j = i+1; j <= nums.length; j++){
+					if(nums[i] > nums[j]) {
+							count++;
+					}
+			}
+	}
+	*/
   // 方法二，归并排序
   function mergeSort(nums) {
     if (nums.length == 1) {
@@ -42,11 +36,8 @@ var reversePairs = function (nums) {
   function splitArr(arr) {
     const LEN = arr.length;
     if (LEN > 1) {
-      let mid = Math.floor(LEN / 2); // 其实此处不一定要均分，只要确保拆分出来的两个数组的长度>=1即可
-      return {
-        left: arr.slice(0, mid),
-        right: arr.slice(mid, LEN),
-      };
+      let mid = Math.floor(LEN / 2);
+      return { left: arr.slice(0, mid), right: arr.slice(mid, LEN) };
     }
   }
   function mergeArr(arr1, arr2) {
@@ -83,5 +74,8 @@ var reversePairs = function (nums) {
   // let newNums = mergeSort(nums);
   // console.log(newNums);
 
-  return count;
+  return count % 1000000007;
+}
+module.exports = {
+  InversePairs: InversePairs,
 };
