@@ -62,3 +62,19 @@ function calcPathFromRoot(root, v, path) {
     right && calcPathFromRoot(right, v, path);
   }
 }
+
+// 判断 node 是否是 targetNode 的祖先节点（直接父节点或间接父节点）
+function isAncestorOf(node, targetNode) {
+  let { left, right } = node;
+  if (left === null && right === null) {
+    return false;
+  }
+  //
+  let isFart = false;
+  if (left === targetNode || right === targetNode) {
+    isFart = true;
+  } else {
+    isFart = (left && isAncestorOf(left, targetNode)) || (right && isAncestorOf(right, targetNode));
+  }
+  return isFart;
+}
