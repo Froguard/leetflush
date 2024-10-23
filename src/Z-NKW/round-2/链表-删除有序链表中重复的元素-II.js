@@ -64,7 +64,7 @@ function deleteDuplicates(head) {
     records.set(v, count + 1);
   }
   // console.log(records);
-  const newValues = values.filter(v => records.get(v) === 1);
+  const newValues = values.filter(v => records.get(v) === 1); // 去重
   // console.log(newValues);
   if (!newValues.length) {
     return null;
