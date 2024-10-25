@@ -29,10 +29,10 @@ function reConstructBinaryTree(preOrder, vinOrder) {
   }
   /**
    * 分治方式，构建节点
-   * @param {number} leftP
-   * @param {number} rightP
-   * @param {number} leftI
-   * @param {number} rightI
+   * @param {number} leftP 前序遍历左边界
+   * @param {number} rightP 前序遍历右边界
+   * @param {number} leftI 中序遍历左边界
+   * @param {number} rightI 中序遍历有边界
    * @returns {TreeNode} 二叉树节点
    */
   function parse(leftP, rightP, leftI, rightI) {
@@ -45,19 +45,6 @@ function reConstructBinaryTree(preOrder, vinOrder) {
     let rootPosI = getPosI(val); // 根元素在 vinOrder 中的位置
     let left = rootPosI - leftI; // 左子节点的个数：中序遍历中，只要是在根元素左边，都是其左子树（或左后代子树）
 
-    /*
-			let llp = leftP+1;
-			let lrp = leftP+left;
-			let rlp = lrp + 1;
-			let rrp = rightP;
-
-			let lli = leftI;
-			let lri = rootPosI - 1;
-			let rli = rootPosI + 1;
-			let rri = rightI;
-			root.left  = parse(llp, lrp, lli, lri);
-			root.right = parse(rlp, rrp, rli, rri);
-			*/
     root.left = parse(leftP + 1, leftP + left, leftI, rootPosI - 1);
     root.right = parse(leftP + left + 1, rightP, rootPosI + 1, rightI);
     return root;
