@@ -71,20 +71,11 @@ function addNumInSortedArr(sortedNumsArr, num) {
     sortedNumsArr.push(num);
     return;
   }
-  let insertPos = sortedNumsArr.length;
-  for (let i = sortedNumsArr.length - 1; i >= 0; i--) {
-    const tmp = sortedNumsArr[i];
-    if (num >= tmp) {
-      insertPos = i + 1;
-      break;
-    } else {
-      // num < tmp
-      insertPos = i;
-      continue;
-    }
+  let i = 0;
+  while (sortedNumsArr[i] < num) {
+    i++;
   }
-  // console.log('插入位置为：', insertPos);
-  sortedNumsArr.splice(insertPos, 0, num);
+  sortedNumsArr.splice(i, 0, num); // 增加一个元素
 }
 
 // const myList = [0, 0, 1, 2, 3, 4, 5, 6, 7, 99, 100];

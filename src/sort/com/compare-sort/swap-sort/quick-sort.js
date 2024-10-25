@@ -10,10 +10,10 @@
 function quickSort(nums, isDesc = false) {
   // 对 nums 中的 第 low 位到第 hight 位组成的序列（同时包含low，high），进行排序
   function quick(low, high) {
-    if (low < high) {
+    if (isDesc ? low > high : low < high) {
       // 1.先一轮操作下来让小于 pivot 的所有元素放在 pivot 的左边，大的放右边。这个过程中，pivot 也有可能被移动，即其坐标可能会移动
       let pivotPos = low;
-      while (low < high) {
+      while (isDesc ? low > high : low < high) {
         let pivot = nums[low];
         if (isDesc ? pivot < nums[low + 1] : pivot > nums[low + 1]) {
           swap(nums, low, low + 1);

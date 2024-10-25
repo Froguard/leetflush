@@ -34,42 +34,42 @@
  * @return {boolean}
  */
 var isValid = function (s) {
-  /*
-    分析，首先，这道题中：
-    只会出现'{','[','(','}',']',')'这6种字符，且有可能出现嵌套
-    我们可以直接把 '{}','()','[]'三种情况进行replace成''，最后如果符合规格的话，应该最后结果为空字符串
-    s.replace(/(\{\})|(\[\])|(\(\))/g,'') === ''
-    但需要注意，有嵌套情况需要处理，所以我们需要借助循环去多次replace然后check
-    */
   if (!s || s.length % 2 !== 0) {
     return false;
   }
-  // 方法一
   /*
-    while (s && (s.includes('()') || s.includes('{}') || s.includes('[]'))) {
-        s = s.replace(/\{\}/g, '').replace(/\(\)/g, '').replace(/\[\]/g, '');
-    }
-    return s === '';
-    */
-
-  // 方法二
+  方法一：正则替换消除正确括号对，能消除为空字符串则算 ok（不适用于有嵌套的出现）
+  分析，首先，这道题中：
+  只会出现'{','[','(','}',']',')'这6种字符，且有可能出现嵌套
+  我们可以直接把 '{}','()','[]'三种情况进行replace成''，最后如果符合规格的话，应该最后结果为空字符串
+  s.replace(/(\{\})|(\[\])|(\(\))/g,'') === ''
+  但需要注意，有嵌套情况需要处理，所以我们需要借助循环去多次replace然后check
+  */
+  // 方法一（while 循环写法）：
   /*
-    for (let i = 0; ; i++) {
-        if (s === '') {
-            // console.log('已满足', i);
-            return true;
-            // break;
-        }
-        const len1 = s.length;
-        s = s.replace(/\{\}/g, '').replace(/\(\)/g, '').replace(/\[\]/g, '');
-        if (s.length === len1) {
-            // console.log('找不到成对出现的目标', i);
-            break;
-        }
-    }
-    // s && console.log(s);
-    return s === '';
-    */
+  while (s && (s.includes('()') || s.includes('{}') || s.includes('[]'))) {
+      s = s.replace(/\{\}/g, '').replace(/\(\)/g, '').replace(/\[\]/g, '');
+  }
+  return s === '';
+  */
+  // 方法一（for 循环写法）
+  /*
+  for (let i = 0; ; i++) {
+      if (s === '') {
+          // console.log('已满足', i);
+          return true;
+          // break;
+      }
+      const len1 = s.length;
+      s = s.replace(/\{\}/g, '').replace(/\(\)/g, '').replace(/\[\]/g, '');
+      if (s.length === len1) {
+          // console.log('找不到成对出现的目标', i);
+          break;
+      }
+  }
+  // s && console.log(s);
+  return s === '';
+  */
   // 方法三
   /**
      使用栈方式，栈具有“先进后出”特性，来预测字符的配对，在输入过程中
@@ -83,6 +83,7 @@ var isValid = function (s) {
      这里用数组的push和pop函数模拟栈，push添加元素到队尾，pop去除队尾元素（同时删除该元素）
      */
   let stack = [];
+  /*outerForLoop: */
   for (let c of s) {
     switch (c) {
       case '{': {
@@ -100,6 +101,7 @@ var isValid = function (s) {
       default: {
         if (stack.length === 0 || c != stack.pop()) {
           return false;
+          // break outerForLoop;
         }
         break;
       }
