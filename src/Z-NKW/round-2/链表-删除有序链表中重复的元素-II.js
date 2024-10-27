@@ -23,7 +23,7 @@
  * @return ListNode类
  */
 function deleteDuplicates(head) {
-  // 方法一：双指针
+  // 方法一：双指针（速度上快一些，但空间复杂度差不多）
   /*
   // 为方便进行双指针查找，在首节点左侧插入临时节点
   let zeroNode = { next: head }; // 不需要完整节点，主要是为了比对 next

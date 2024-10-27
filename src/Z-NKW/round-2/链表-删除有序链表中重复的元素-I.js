@@ -1,4 +1,29 @@
 /**
+ * 删除有序链表中重复的元素-I
+ * // https://www.nowcoder.com/practice/c087914fae584da886a0091e877f2c79?tpId=295&tqId=664&ru=/exam/oj&qru=/ta/format-top101/question-ranking&sourceUrl=%2Fexam%2Foj%3Fpage%3D1%26tab%3D%25E7%25AE%2597%25E6%25B3%2595%25E9%259D%25A2%25E8%25AF%2595%26topicId%3D295
+ */
+
+/*
+ * function ListNode(x){
+ *   this.val = x;
+ *   this.next = null;
+ * }
+ */
+/**
+ * 代码中的类名、方法名、参数名已经指定，请勿修改，直接返回方法规定的值即可
+ *
+ *
+ * @param head ListNode类
+ * @return ListNode类
+ */
+function deleteDuplicates(head) {
+  const oldVals = getValsByNode(head);
+  const newVals = [...new Set(oldVals)];
+  resetNodeByVals(head, newVals);
+  return head;
+}
+
+/**
  * 根据链表求出每个节点的值，然后以数组返回
  * @param {ListNode} head
  * @returns {Array<number>} values 链表中每个节点的值所组成的数组
@@ -39,45 +64,6 @@ function resetNodeByVals(head, values) {
   return head;
 }
 
-/**
- * 找到链表的尾部节点
- * @param {ListNode} head
- * @param {Function} eachFunc 遍历的回调函数
- * @returns tail
- */
-function findTailNode(head, eachFunc) {
-  if (!head) {
-    return null;
-  }
-  const needCallBack = typeof eachFunc === 'function';
-  let tail = head;
-  let index = 0;
-  needCallBack && eachFunc(tail, index);
-  while (tail.next) {
-    tail = tail.next;
-    needCallBack && eachFunc(tail, ++index);
-  }
-  return tail;
-}
-
-/**
- * 在升序数组中插入元素，同时保障插入后还是升序的
- * @param {Array<number>} sortedNumsArr
- * @param {number} num
- * @returns {void} 无返回，直接在数组中插入
- */
-function addNumInSortedArr(sortedNumsArr, num) {
-  if (!sortedNumsArr.length) {
-    sortedNumsArr.push(num);
-    return;
-  }
-  let i = 0;
-  while (sortedNumsArr[i] < num && i < sortedNumsArr.length) {
-    i++;
-  }
-  sortedNumsArr.splice(i, 0, num); // 增加一个元素
-}
-
-// const myList = [0, 0, 1, 2, 3, 4, 5, 6, 7, 99, 100];
-// addNumInSortedArr(myList, 0);
-// console.log(myList);
+module.exports = {
+  deleteDuplicates: deleteDuplicates,
+};
