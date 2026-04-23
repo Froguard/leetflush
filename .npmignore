@@ -14,6 +14,7 @@
 ./web
 ./scripts
 ./omc
+./.claude
 *.js
 *.ts
 *.md

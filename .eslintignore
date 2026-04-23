@@ -1,5 +1,6 @@
 /node_modules
 /omc
+/.claude
 /tpl
 
 .eslintrc.js

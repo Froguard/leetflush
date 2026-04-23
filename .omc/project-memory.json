@@ -77,21 +77,21 @@
   },
   "hotPaths": [
     {
-      "path": ".npmignore",
-      "accessCount": 2,
-      "lastAccessed": 1776943158340,
-      "type": "file"
-    },
-    {
       "path": ".eslintignore",
-      "accessCount": 2,
-      "lastAccessed": 1776943158641,
+      "accessCount": 4,
+      "lastAccessed": 1776943554414,
       "type": "file"
     },
     {
       "path": ".prettierignore",
-      "accessCount": 2,
-      "lastAccessed": 1776943158934,
+      "accessCount": 4,
+      "lastAccessed": 1776943554724,
+      "type": "file"
+    },
+    {
+      "path": ".npmignore",
+      "accessCount": 4,
+      "lastAccessed": 1776943555026,
       "type": "file"
     },
     {

@@ -52,3 +52,6 @@ src/**/*/history/*.*
 
 # cahche
 .cache
+
+# claude
+.claude
