@@ -23,3 +23,7 @@
 .*rc
 .pre-npm-publish.js
 .pre-git-cmd.js
+
+com/
+src/
+scripts/
