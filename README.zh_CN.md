@@ -9,6 +9,20 @@
   - TypeScript: ts-node@10.4.0+
   - JavaScript: nodejs@14.8.0+
 
+## 执行
+
+1. js
+
+```bash
+node ./xxx.js
+```
+
+2. ts
+
+```bash
+npx ts-node ./xxx.ts
+```
+
 ## 版权
 
 @Pumeow (@Froguard)

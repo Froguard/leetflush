@@ -9,6 +9,20 @@
   - typescript: ts-node@10.4.0+
   - javascript: nodejs@14.8.0+
 
+## Test
+
+1. js
+
+```bash
+node ./xxx.js
+```
+
+2. ts
+
+```bash
+npx ts-node ./xxx.ts
+```
+
 ## copyright
 
 @Pumeow (@Froguard)
