@@ -7,11 +7,6 @@ echo -e "\x1b[1;35m[pre-commit]\x1b[0m: Start git-hooks via husky@^8.0.3..."
 
 export GIT_CMD="git commit"
 
-# pre-git-commit
-echo ""
-echo -e "\x1b[1;90mnpx frogagu pre-git-commit\x1b[0m"
-npx frogagu pre-git-commit
-
 # lint-staged
 echo -e "\x1b[1;90mnpx lint-staged\x1b[90m"
 echo ""

@@ -1,7 +1,7 @@
 // https://leetcode-cn.com/problems/longest-substring-without-repeating-characters
 // https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/
 /*
-给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
+给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。最长无重复子串 / 最长无重复子序列
 
 示例 1:
 
