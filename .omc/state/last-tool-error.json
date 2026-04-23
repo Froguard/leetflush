@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"git commit -m \\\"$(cat <<'EOF'\\nchore: 添加 README 中文翻译并更新忽略配置\\n\\n- 新增 README.zh_CN.md\\n- 将 omc 目录加入 .npmignore/.eslintignore/.prettierignore\\n- 清理项目结构\\n\\nCo-Authored-By: Claude Sonnet 4.6 <n...",
+  "error": "Exit code 1\n\n-e \u001b[1;35m[pre-commit]\u001b[0m: Start git-hooks via husky@^8.0.3...\n-e \u001b[1;90mnpx lint-staged\u001b[90m\n\n[STARTED] Preparing lint-staged...\n[COMPLETED] Preparing lint-staged...\n[STARTED] Running tasks for staged files...\n[STARTED] .lintstagedrc.js — 14 files\n[STARTED] *.{js,jsx,ts,md,json} — 8 files\n[STARTED] *.{js,jsx,tsx,ts} — 2 files\n[STARTED] prettier --write\n[STARTED] eslint --fix\n[COMPLETED] prettier --write\n[COMPLETED] *.{js,jsx,ts,md,json} — 8 files\n[COMPLETED] eslint --fix\n[COMPLETE...",
+  "timestamp": "2026-04-23T11:21:28.815Z",
+  "retry_count": 1
+}

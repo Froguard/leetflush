@@ -99,6 +99,18 @@
       "accessCount": 1,
       "lastAccessed": 1776942920406,
       "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 1,
+      "lastAccessed": 1776943296179,
+      "type": "file"
+    },
+    {
+      "path": ".commitlintrc.ts",
+      "accessCount": 1,
+      "lastAccessed": 1776943296242,
+      "type": "file"
     }
   ],
   "userDirectives": []
