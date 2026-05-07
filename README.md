@@ -2,6 +2,11 @@
 
 > Record of solving Leetcode problems. Just only for AC, not the best performance solution
 
+## status
+
+<img width="1125" height="962" alt="0d5cd819b6b8d38cb96fbca0d3420417" src="https://github.com/user-attachments/assets/58e49525-0bbd-4c94-82da-03863e014ad1" />
+
+
 ## pages
 
 - [leetcode‘s problems](https://leetcode.cn/problemset/)
